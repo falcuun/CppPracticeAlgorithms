@@ -8,3 +8,16 @@ int solveForExp(int base, int poweredValue) {
 	}
 	return counter;
 }
+
+// Calculates the absolute sum of numbers given in the list 
+// Returns the integer value of all the numbers summed up 
+int getAbsSum(std::vector<int> arr) {
+	int sum = 0;
+	for(int i = 0; i < arr.size(); i++){
+		if(arr[i] < 0){
+			arr[i] = -arr[i];
+		}
+		sum += arr[i];
+	}
+	return sum;
+}

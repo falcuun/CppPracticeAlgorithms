@@ -5,18 +5,15 @@ int numberSyllables(std::string word) {
 	if (word == "") {
 		return countSyl;
 	}
-
 	countSyl = 1;
-
 	while (word.find("-") != std::string::npos) {
 		++countSyl;
 		word.erase(word.begin() + word.find("-"));
 	}
+	return countSyl;
+}
 
-	if (countSyl == 0) {
-		return 0;
-	}
-	else {
-		return countSyl;
-	}
+// Displays the amount of words in a sentence.
+int countWords(std::string str) {
+	return std::count(str.begin(), str.end(), ' ') + 1;
 }
